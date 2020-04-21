@@ -1,5 +1,13 @@
 pipeline {
-  agent any 
+  agent {
+      dockerfile {
+          filename 'Dockerfile'
+          dir 'build'
+          label 'ci-sandbox'
+          additionalBuildArgs  ''
+          args ''
+      }
+  }
   stages {
       stage('Stage 1') {
           steps {
@@ -8,3 +16,4 @@ pipeline {
       }
   }
 }
+
