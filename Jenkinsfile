@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent { label 'docker-node-static' }
   stages {
       stage('Stage 1') {
           steps {
