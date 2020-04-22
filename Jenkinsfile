@@ -1,5 +1,5 @@
 pipeline {
-  agent { dockerfile true }
+  agent { label 'agent-base-sandbox' }
   stages {
       stage('Stage 1') {
           steps {
